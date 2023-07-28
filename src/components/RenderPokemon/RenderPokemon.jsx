@@ -41,8 +41,8 @@ export default function RenderPokemon() {
         style={{ display: "flex", margin: "70px auto",
         padding: "10px", 
         paddingLeft: "20px",
-        borderRadius: "20px", 
-        width: "350px",
+        borderRadius: "20px",
+        minWidth: "270px", 
         outline: "none",
         border:"none",
          }}

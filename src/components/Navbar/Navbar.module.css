@@ -12,13 +12,16 @@
   padding: 15px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.639);
+  position: relative;
 }
 
 .nav_itens {
   display: flex;
   gap: 25px;
-  align-items: flex-end;
-  padding: 0px 15px 0px 0px;
+  padding: 0px 15px 10px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .nav_itens > li > a {
