@@ -1,76 +1,58 @@
-# 🧠 Pokédex com Next.js + PokéAPI
+# 🧠 Pokédex with Next.js + PokéAPI
+Welcome to my Pokédex project, built with lots of love for Pokémon fans!
+This project was developed using Next.js, fetching data directly from the PokéAPI to create a fun and interactive way to search and view Pokémon.
 
-Seja bem-vindo(a) ao meu projeto de **Pokédex**, feito com muito carinho para fãs de Pokémon!  
-Este projeto foi desenvolvido com **Next.js**, consumindo dados diretamente da **[PokéAPI](https://pokeapi.co/)** para criar uma experiência divertida de busca e visualização de Pokémons.
+## 🚀 Features
+🔍 Dynamic search that filters Pokémon as you type
 
----
+📋 Listing of the first 100 Pokémon with images and names
 
-## 🚀 Funcionalidades
+📄 Individual Pokémon detail pages (work in progress)
 
-- 🔍 Busca dinâmica por Pokémon conforme você digita
-- 📋 Listagem dos primeiros 100 Pokémons com imagens e nomes
-- 📄 Página individual para cada Pokémon (em progresso)
-- ⚡ Interface rápida com renderização no lado do servidor (SSR)
-- 🌐 Uso inteligente de `use client` apenas onde é necessário
+⚡ Fast interface with server-side rendering (SSR)
 
----
+🌐 Smart use of use client only where necessary
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Axios](https://axios-http.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [PokéAPI](https://pokeapi.co/)
+- Next.js
+- React
+- TypeScript
+- Axios
+- Tailwind CSS
+- PokéAPI
 
----
+## 🧪 How to Run Locally
+bash 
+copy
+edit
 
-## 📁 Estrutura do Projeto
+### 1. Clone the repo
+git clone https://github.com/your-username/pokedex-app
 
-📦 app
-┣ 📜 page.tsx # Página principal
-┣ 📂 components
-┃ ┣ 📜 RenderPokemon.tsx # Renderiza os cards dos Pokémons
-┃ ┗ 📜 SearchPokemon.tsx # Input de busca
-
-yaml
-Copiar
-Editar
-
----
-
-## 🧪 Como rodar o projeto localmente
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/pokedex-app.git
-
-# 2. Acesse a pasta
+### 2. Go to the project folder
 cd pokedex-app
 
-# 3. Instale as dependências
+### 3. Install dependencies
 npm install
 
-# 4. Rode o servidor de desenvolvimento
+### 4. Run the development server
 npm run dev
 
-# 5. Acesse no navegador:
+### 5. Open your browser at:
 http://localhost:3000
-💡 O que aprendi com esse projeto
-Consumo de APIs REST com Axios e TypeScript
+## 💡 What I Learned
+Consuming REST APIs with Axios and TypeScript
 
-Prática com renderização assíncrona no Next.js
+Asynchronous rendering with Next.js
 
-Uso de Suspense para loading em Server Components
+Using Suspense for loading states in Server Components
 
-Boas práticas de separação entre client/server
+Best practices separating client and server code
 
-⚠️ Observações
-Este projeto começou quando o Next ainda usava o pages/ para rotas.
-Recentemente, atualizei para a nova arquitetura com App Router (app/), utilizando boas práticas modernas.
+⚠️ Notes
+This project started back when Next.js used the pages/ routing system.
+I recently updated it to the new App Router (app/) and modern best practices.
 
-💬 Não é um projeto profissional de portfólio, mas foi super divertido trabalhar com ele — e espero que você também curta explorar!
-
-📸 Preview
-![Pokedex Banner](https://github.com/alexsobraldev/pokedex-project/raw/main/public/image.png)
+## 💬 Final Thoughts
+This isn't a professional portfolio project, but I had a lot of fun building it — and I hope you enjoy exploring it too!
