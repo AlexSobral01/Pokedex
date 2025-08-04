@@ -1,5 +1,5 @@
 import { NavBar } from "@/components/NavBar";
-import { RenderPokemon } from "@/components/RenderPokemon";
+import RenderPokemon from "@/components/RenderPokemon";
 import SearchPokemon from "@/components/SearchPokemon";
 import { Suspense } from "react";
 
