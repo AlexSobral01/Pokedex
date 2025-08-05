@@ -3,7 +3,7 @@ export interface Pokemon {
   name: string;
   height?: number;
   weight?: number;
-  types?: PokemonTypes[];
+  types?: PokemonType[];
   sprites?: PokemonSprites;
 }
 
@@ -19,11 +19,12 @@ interface PokemonSprites {
   };
 }
 
-interface PokemonTypes {
+interface PokemonType {
   slot: number;
-  types: {
+  type: {
     name: string;
-  }
+    url: string;
+  };
 }
 
 export interface EachPokemon {
