@@ -4,10 +4,9 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 
-const PokemonPage = async ({ params }: { params: { id: string } }) => {
+const PokemonPage = async ({ params }: { params: Promise<{ id: string[] }> }) => {
   try {
-    const resolvedParams = await Promise.resolve(params)
-    const id = Number(resolvedParams.id)
+    const { id } = await params;
 
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const pokemon: Pokemon = response.data;
