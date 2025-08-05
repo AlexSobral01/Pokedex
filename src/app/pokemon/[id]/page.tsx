@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const PokemonPage = async ({ params }: { params: { id: string } }) => {
   try {
-    const resolvedParams = await params;  // This is temporary, just a way to fix the Next.js params error. 
-    const id = Number(resolvedParams.id);
+    const resolvedParams = await Promise.resolve(params)
+    const id = Number(resolvedParams.id)
 
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const pokemon: Pokemon = response.data;
