@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export interface Pokemon {
   id: number;
   name: string;
@@ -8,6 +10,7 @@ export interface Pokemon {
 }
 
 interface PokemonSprites {
+  map(arg0: (ab: any) => JSX.Element): import("react").ReactNode;
   front_default?: string;
   back_default?: string;
   versions?: {

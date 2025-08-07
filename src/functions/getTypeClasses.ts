@@ -1,24 +1,20 @@
-export function getTypeClasses(type: string): string {
-  const typeClasses: Record<string, string> = {
-    fire: "bg-orange-500 text-white",
-    water: "bg-blue-500 text-white",
-    grass: "bg-green-500 text-white",
-    electric: "bg-yellow-400 text-black",
-    ice: "bg-cyan-300 text-black",
-    fighting: "bg-red-700 text-white",
-    poison: "bg-purple-500 text-white",
-    ground: "bg-yellow-600 text-white",
-    flying: "bg-indigo-300 text-black",
-    psychic: "bg-pink-400 text-white",
-    bug: "bg-lime-500 text-black",
-    rock: "bg-yellow-800 text-white",
-    ghost: "bg-purple-800 text-white",
-    dragon: "bg-indigo-700 text-white",
-    dark: "bg-gray-800 text-white",
-    steel: "bg-gray-400 text-black",
-    fairy: "bg-pink-300 text-black",
-    normal: "bg-gray-300 text-black",
-  };
-
-  return typeClasses[type] ?? "bg-gray-200 text-black"; // padrão
-}
+export const typeColors: Record<string, string> = {
+  normal: "#A8A878",
+  fire: "#F08030",
+  water: "#6890F0",
+  electric: "#F8D030",
+  grass: "#78C850",
+  ice: "#98D8D8",
+  fighting: "#C03028",
+  poison: "#A040A0",
+  ground: "#E0C068",
+  flying: "#A890F0",
+  psychic: "#F85888",
+  bug: "#A8B820",
+  rock: "#B8A038",
+  ghost: "#705898",
+  dragon: "#7038F8",
+  dark: "#705848",
+  steel: "#B8B8D0",
+  fairy: "#EE99AC",
+};
