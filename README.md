@@ -3,7 +3,6 @@ Welcome to my Pokédex project, built with lots of love for Pokémon fans!
 This project was developed using Next.js, fetching data directly from the PokéAPI to create a fun and interactive way to search and view Pokémon.
 
 ## 🚀 Features
-🔍 Dynamic search that filters Pokémon as you type
 
 📋 Listing of the first 100 Pokémon with images and names
 
