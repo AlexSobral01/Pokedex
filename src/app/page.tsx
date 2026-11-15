@@ -5,7 +5,6 @@ import SearchPokemon from "@/components/SearchPokemon";
 export default function Home() {
   return (
     <>
-      <NavBar /> 
       <SearchPokemon />
       <RenderPokemon />
     </>

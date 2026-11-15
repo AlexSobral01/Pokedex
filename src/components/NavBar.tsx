@@ -17,7 +17,7 @@ export const NavBar = () => {
         </div>
         <ul className="flex gap-[25px] pb-[10px] pr-[15px] absolute bottom-0 right-0">
           <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">Home</Link></li>
-          <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">About</Link></li>
+          <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/about">About</Link></li>
           <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">Contact</Link></li>
           <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">Support</Link></li>
         </ul>
