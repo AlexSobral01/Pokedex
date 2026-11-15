@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 import { RenderPokemon } from "./RenderPokemon"
 import { paginationApi } from "@/api/api";
+import { PokemonType } from "@/types/pokemonType";
 
 export const Pagination = () => {
-    let [offset, setOffSet] = useState(0);
-    const [pokemons, setPokemons] = useState<any[]>([]); 
+    const [offset, setOffSet] = useState(0);
+    const [pokemons, setPokemons] = useState<PokemonType[]>([]); 
 
     useEffect(() => {
         const fetchPokemons = async() => {
@@ -15,7 +16,7 @@ export const Pagination = () => {
         };
 
         fetchPokemons();
-    })
+    }, [offset])
 
     return (
         <section>
@@ -27,10 +28,10 @@ export const Pagination = () => {
                             setOffSet(offset - 20)}}
                         }
                 >Prev</button>
-                <span>{offset / 20}</span>
+                <span>{offset / 20 + 1}</span>
                 <button className="bg-green-600 px-2 rounded-tr-md hover:bg-green-800 transition duration-300 ease-in-out" 
                     onClick={() => {
-                        if (offset < 1025) {
+                        if (offset < 1020) {
                             setOffSet(offset + 20)}
                         }
                     }
