@@ -12,7 +12,11 @@ export const NavBar = () => {
             src={"/pokemon-png-logo.webp"} 
             alt="Logo"
             width={100}
-            height={40} 
+            height={40}
+            style = {{
+              width: "100px",
+              height: "auto"
+            }} 
           />
         </div>
         <ul className="flex gap-[25px] pb-[10px] pr-[15px] absolute bottom-0 right-0">
