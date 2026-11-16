@@ -13,7 +13,7 @@ export const RenderPokemon = ({detailedPokemons} : { detailedPokemons: PokemonTy
               src={pokemon.sprites?.front_default ?? undefined}
               alt={pokemon.name}
             />
-            <p className="text-white">{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</p>
+            <p>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</p>
           </div>
         </Link>
       ))}
