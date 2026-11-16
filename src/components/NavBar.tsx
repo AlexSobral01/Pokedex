@@ -13,8 +13,9 @@ export const NavBar = () => {
             alt="Logo"
             width={100}
             height={40}
+            loading="eager"
             style = {{
-              width: "100px",
+              width: "auto",
               height: "auto"
             }} 
           />
