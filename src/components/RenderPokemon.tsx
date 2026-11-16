@@ -10,7 +10,7 @@ export const RenderPokemon = ({detailedPokemons} : { detailedPokemons: PokemonTy
         <Link key={pokemon.id} href={`/pokemon/${pokemon.id}`}>
           <div className="text-center w-[200px] border-[1px] border-green-500 rounded-2xl flex flex-col itens-center p-[30px] m-[15px]">
             <img
-              src={pokemon.sprites?.versions['generation-iv'].platinum.front_default ?? undefined}
+              src={pokemon.sprites?.front_default ?? undefined}
               alt={pokemon.name}
             />
             <p className="text-white">{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</p>

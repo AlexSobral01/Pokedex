@@ -31,7 +31,7 @@ export const Pagination = () => {
                 <span>{offset / 20 + 1}</span>
                 <button className="bg-green-600 px-2 rounded-tr-md hover:bg-green-800 transition duration-300 ease-in-out" 
                     onClick={() => {
-                        if (offset < 1020) {
+                        if (offset < 1340) {
                             setOffSet(offset + 20)}
                         }
                     }

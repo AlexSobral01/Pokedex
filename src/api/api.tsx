@@ -1,4 +1,4 @@
-import { pokemonListItem, PokemonType } from "@/types/pokemonType";
+import { pokemonListItem } from "@/types/pokemonType";
 import axios from "axios";
 
 export const paginationApi = async ({offset}: {offset: number}) => {
