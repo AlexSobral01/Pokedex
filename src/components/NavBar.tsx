@@ -24,7 +24,7 @@ export const NavBar = () => {
           <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">Home</Link></li>
           <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/about">About</Link></li>
           <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">Contact</Link></li>
-          <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/">Support</Link></li>
+          <li><Link className="text-white transition duration-500 ease-in-out hover:text-gray-400" href="/support">Support</Link></li>
         </ul>
         </nav>
     </header>
