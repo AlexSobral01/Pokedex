@@ -58,22 +58,22 @@ export const SupportForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5 max-w-xl mx-4"
+            className="flex flex-col gap-5 max-w-xl mx-4 md:ml-10"
         >
             <div className="flex flex-col gap-1">
-                <label htmlFor="name">Nome</label>
+                <label htmlFor="name">Name</label>
                 <input
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Como podemos te chamar?"
+                    placeholder="What should we call you?"
                     required
                     className="rounded-lg border border-gray-500 bg-transparent p-3 outline-none focus:border-amber-200"
                 />
             </div>
 
             <div className="flex flex-col gap-1">
-                <label htmlFor="email">Seu e-mail</label>
+                <label htmlFor="email">Your e-mail</label>
                 <input
                     id="email"
                     name="email"
@@ -85,13 +85,13 @@ export const SupportForm = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-                <label>Tipo de mensagem</label>
+                <label>Mensage type</label>
 
                 <div className="flex flex-col gap-2">
                     {[
-                        { value: "bug", label: "Reportar um bug" },
-                        { value: "suggestion", label: "Enviar uma sugestão" },
-                        { value: "other", label: "Outro assunto" },
+                        { value: "bug", label: "Report a bug" },
+                        { value: "suggestion", label: "Send a suggestion" },
+                        { value: "other", label: "Other" },
                     ].map((option) => (
                         <label
                             key={option.value}
@@ -111,7 +111,7 @@ export const SupportForm = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-                <label htmlFor="subject">Assunto</label>
+                <label htmlFor="subject">Subject</label>
                 <input
                     id="subject"
                     name="subject"
@@ -123,7 +123,7 @@ export const SupportForm = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-                <label htmlFor="message">Mensagem</label>
+                <label htmlFor="message">Mensage</label>
                 <textarea
                     id="message"
                     name="message"

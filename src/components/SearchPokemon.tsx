@@ -39,7 +39,7 @@ const SearchPokemon = () => {
   return (
     <div className="flex flex-col items-center p-6">
       <input
-        className="my-4 p-2.5 outline-none border-none rounded-3xl bg-white text-black min-w-[270px] px-4"
+        className="my-4 p-2.5 outline-none border-none rounded-3xl bg-gray-300 dark:bg-white text-black min-w-[270px] px-4"
         type="text"
         placeholder="Pikachu"
         onChange={(e) => setGetPokemon(e.target.value)}
