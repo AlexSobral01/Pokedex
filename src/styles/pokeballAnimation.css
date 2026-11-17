@@ -1,0 +1,75 @@
+
+/* Sequência da Pokébola */
+
+.foto-pokemon.animando .pokebola {
+    animation:
+        lancar 0.8s ease-out forwards,
+        sumir 0.3s ease-in 2.5s forwards;
+}
+
+.foto-pokemon.animando .pokebola .luz {
+    animation: piscar 1.2s ease-in-out 0.9s forwards;
+}
+
+.foto-pokemon.animando .pokebola .topo {
+    transform-origin: 0 100%;
+    animation: abrir 0.3s ease-out 2.1s forwards;
+}
+
+.foto-pokemon.animando .circulo {
+    animation: circulo 0.8s ease-out 2.2s forwards;
+}
+
+@keyframes lancar {
+    0% {
+        opacity: 1;
+        transform: translate(-140px, 120px) rotate(0deg) scale(.6);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-40px, -110px) rotate(360deg) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, -80px) rotate(720deg) scale(1);
+    }
+}
+
+@keyframes piscar {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    55% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes abrir {
+    to {
+        transform: rotate(-55deg);
+    }
+}
+
+@keyframes circulo {
+    0% {
+        opacity: 0;
+        transform: scale(.2);
+    }
+    37% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes sumir {
+    from {
+        opacity: 1;
+        transform: translate(0, -80px) rotate(720deg) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(0, -80px) rotate(720deg) scale(.5);
+    }
+}
