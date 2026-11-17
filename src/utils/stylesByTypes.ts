@@ -1,0 +1,43 @@
+export const BackgroundByTypes: Record<string, string> = {
+    normal: "bg-gray-400 text-white",
+    fire: "bg-orange-500 text-white",
+    water: "bg-blue-500 text-white",
+    electric: "bg-yellow-400 text-black",
+    grass: "bg-green-600 text-white",
+    ice: "bg-cyan-300 text-black",
+    fighting: "bg-red-700 text-white",
+    poison: "bg-purple-500 text-white",
+    ground: "bg-amber-600 text-white",
+    flying: "bg-sky-400 text-white",
+    psychic: "bg-pink-500 text-white",
+    bug: "bg-lime-500 text-black",
+    rock: "bg-stone-500 text-white",
+    ghost: "bg-indigo-700 text-white",
+    dragon: "bg-violet-600 text-white",
+    dark: "bg-neutral-800 text-white",
+    steel: "bg-slate-400 text-black",
+    fairy: "bg-pink-300 text-black",
+};
+
+export const BorderAndShadowTypes: Record<string, string> = {
+    normal: "border border-gray-500 shadow-gray-400",
+    fire: "border border-red-500 shadow-red-400",
+    water: "border border-blue-700 shadow-blue-500",
+    electric: "border border-yellow-500 shadow-blue-400",
+    grass: "border border-green-700 shadow-green-800",
+    ice: "border border-sky-200 shadow-sky-300",
+    fighting: "border border-red-700 shadow-red-600",
+    poison: "border border-purple-500 shadow-purple-400",
+    ground: "border border-amber-500 shadow-amber-600",
+    flying: "border border-sky-500 shadow-sky-400",
+    psychic: "border border-pink-500 shadow-pink-400",
+    bug: "border border-green-500 shadow-green-400",
+    rock: "border border-stone-500 shadow-stone-400",
+    ghost: "border border-indigo-700 shadow-indigo-600",
+    dragon: "border border-violet-600 shadow-violet-500",
+    dark: "border border-neutral-200 shadow-neutral-700",
+    steel: "border border-slate-400 shadow-slate-300",
+    fairy: "border border-pink-300 shadow-blue-200",
+};
+
+export const defaultBackgroundByTypes = "bg-gray-500 text-white";
