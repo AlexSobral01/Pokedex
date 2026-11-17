@@ -34,7 +34,7 @@ const pokePage = async({ params }: Props) => {
                     <ul className="text-lg">
                         <li>Name: {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</li>
                         <li>Height: {pokemon.height}</li>
-                        <li>Height: {pokemon.weight}</li>
+                        <li>Weight: {pokemon.weight}</li>
                     </ul>
                 </div>
             </section>
