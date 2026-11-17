@@ -1,4 +1,4 @@
-import { pokemonListItem } from "@/types/pokemonType";
+import { pokemonListItem, PokemonType } from "@/types/pokemonType";
 import axios from "axios";
 
 export const paginationApi = async ({offset}: {offset: number}) => {
@@ -17,6 +17,19 @@ export const paginationApi = async ({offset}: {offset: number}) => {
     return detailedPokemons;
 }
 
-export const pokemonAoi = async () => {
+export const pokemonAoi = async ({ pokemonId }: { pokemonId:PokemonType } ) => {
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+    const results = response.data.results;
 
+    const detailedPokemon = await Promise.all(
+        results.map(async (pokemon: pokemonListItem) => {
+            if (!pokemon.url) {
+                throw new Error("Pokemon URL is missing");
+            }
+            const res = await axios.get(pokemon.url);
+            return res.data;
+        })
+    );
+
+    return detailedPokemon;
 }
