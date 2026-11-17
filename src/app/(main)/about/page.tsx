@@ -1,6 +1,6 @@
 const about = () => {
     return (
-        <section className="w-full pl-10 my-10 flex flex-col gap-3">
+        <section className="w-full px-6 my-10 flex flex-col gap-3">
             <h1 className="text-3xl font-bold">About Pokédex</h1>
             <h2 className="text-xl font-bold">About the Project</h2>
             <p>This project was developed for learning purposes using the <a className="text-amber-300 hover:text-amber-400 transition duration-300 ease-in-out" href="https://pokeapi.co/">PokeApi</a>, a RESTful API that provides information about Pokémon from different generations.</p>

@@ -37,10 +37,10 @@ export const SupportForm = () => {
             const result = await response.json();
 
             if (!response.ok) {
-                throw new Error(result.error || "Erro ao enviar mensagem.");
+                throw new Error(result.error || "Failed to send message.");
             }
 
-            setFeedback("Mensagem enviada com sucesso! Obrigado pelo contato.");
+            setFeedback("Message sent successfully! Thank you for reaching out.");
             form.reset();
             setType("bug");
 
@@ -48,7 +48,7 @@ export const SupportForm = () => {
             setFeedback(
                 error instanceof Error
                     ? error.message
-                    : "Não foi possível enviar sua mensagem."
+                    : "Unable to send your message."
             );
         } finally {
             setIsLoading(false);
@@ -58,7 +58,7 @@ export const SupportForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5 max-w-xl mx-4 md:ml-10"
+            className="flex flex-col gap-5 max-w-xl mx-6"
         >
             <div className="flex flex-col gap-1">
                 <label htmlFor="name">Name</label>
@@ -73,19 +73,19 @@ export const SupportForm = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-                <label htmlFor="email">Your e-mail</label>
+                <label htmlFor="email">Your email</label>
                 <input
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="exemplo@email.com"
+                    placeholder="example@email.com"
                     required
                     className="rounded-lg border border-gray-500 bg-transparent p-3 outline-none focus:border-amber-200"
                 />
             </div>
 
             <div className="flex flex-col gap-2">
-                <label>Mensage type</label>
+                <label>Message type</label>
 
                 <div className="flex flex-col gap-2">
                     {[
@@ -116,19 +116,19 @@ export const SupportForm = () => {
                     id="subject"
                     name="subject"
                     type="text"
-                    placeholder="Ex: Erro ao carregar Pokémon"
+                    placeholder="e.g. Error loading Pokémon"
                     required
                     className="rounded-lg border border-gray-500 bg-transparent p-3 outline-none focus:border-amber-200"
                 />
             </div>
 
             <div className="flex flex-col gap-1">
-                <label htmlFor="message">Mensage</label>
+                <label htmlFor="message">Message</label>
                 <textarea
                     id="message"
                     name="message"
                     rows={5}
-                    placeholder="Descreva sua mensagem com detalhes..."
+                    placeholder="Describe your message in detail..."
                     required
                     className="rounded-lg border border-gray-500 bg-transparent p-3 outline-none focus:border-amber-200 resize-y"
                 />
@@ -139,7 +139,7 @@ export const SupportForm = () => {
                 disabled={isLoading}
                 className="rounded-lg bg-amber-300 text-black font-semibold p-3 hover:bg-amber-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                {isLoading ? "Enviando..." : "Enviar mensagem"}
+                {isLoading ? "Sending..." : "Send message"}
             </button>
 
             {feedback && (
@@ -149,7 +149,7 @@ export const SupportForm = () => {
             )}
 
             <p className="text-xs text-gray-400 text-center">
-                Seus dados serão utilizados apenas para responder à sua mensagem.
+                Your information will only be used to respond to your message.
             </p>
         </form>
     );

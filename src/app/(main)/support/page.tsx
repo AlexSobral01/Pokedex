@@ -4,7 +4,7 @@ import Image from "next/image";
 const supportPage = () => {
     return (
         <>
-            <section className="my-10 ml-10 flex flex-col gap-2">
+            <section className="my-10 mx-6 flex flex-col gap-2">
                 <h1 className="text-2xl font-bold my-4">About</h1>
                 <p>
                     This project is initially being developed for educational
