@@ -13,17 +13,17 @@ const pokePage = async({ params }: Props) => {
     return (
         <>
         <main className="mt-20 mx-6">
-            <section className={"flex shadow-md rounded-2xl overflow-hidden "+BorderAndShadowTypes[defaultTypes]}>
+            <section className={"md:flex shadow-md rounded-2xl overflow-hidden "+BorderAndShadowTypes[defaultTypes]}>
                 <div className="relative">
-                    <div className={BorderAndShadowTypes[defaultTypes] +" " + BackgroundByTypes[defaultTypes]+ " h-60 w-50 rounded-l-2xl rounded-r-full flex justify-center items-center "+ BorderAndShadowTypes}>
+                    <div className={BorderAndShadowTypes[defaultTypes] +" " + BackgroundByTypes[defaultTypes]+ " h-60 md:w-50 rounded-t-2xl rounded-b-full md:rounded-l-2xl md:rounded-r-full flex justify-center items-center "+ BorderAndShadowTypes}>
                         <img 
-                            className="w-56 -mr-12"
+                            className="w-56 -mb-12 md:mb-0 md:-mr-12"
                             src={pokemon.sprites?.versions?.["generation-v"]["black-white"].animated.front_default || undefined} alt={pokemon.name} 
                         />
                     </div>
-                    <div className="bg-blue-950 absolute top-0 left-0 -z-10 h-full w-full"></div>
+                    <div className="bg-gray-200 dark:bg-blue-950 absolute top-0 left-0 -z-10 h-full w-full"></div>
                 </div>
-                <div className="bg-blue-950 w-full pt-6 pl-6">
+                <div className="bg-gray-200 dark:bg-blue-950 w-full pt-6 pl-6">
                     <div className="flex justify-between border-b-1 py-2 mb-2">
                         <h1> ID: {pokemon.id}</h1>
                         <span>
