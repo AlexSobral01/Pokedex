@@ -1,4 +1,4 @@
-import { pokemonListItem, PokemonType } from "@/types/pokemonType";
+import { pokemonListItem } from "@/types/pokemonType";
 import axios from "axios";
 
 export const paginationApi = async ({offset}: {offset: number}) => {
@@ -17,8 +17,7 @@ export const paginationApi = async ({offset}: {offset: number}) => {
     return detailedPokemons;
 }
 
-export const pokemonApi = async ( pokemonId:number ) => {
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+export const pokemonApi = async ( pokemon:number | string ) => {
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
     return response.data;
-
 }

@@ -22,7 +22,11 @@ export type PokemonType = {
         };
     };
     types: PokemonTypeSlot[];
-};;
+    cries: {
+        latest: string | null;
+        legacy: string | null;
+    };
+};
 
 export type PokemonTypeSlot = {
     slot: number;
