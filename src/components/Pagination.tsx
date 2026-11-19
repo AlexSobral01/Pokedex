@@ -22,14 +22,14 @@ export const Pagination = () => {
         <section>
             <RenderPokemon detailedPokemons={pokemons} />
             <div className="flex gap-10 justify-center my-10">
-                <button className="bg-green-600 px-2 rounded-bl-md hover:bg-green-800 transition duration-300 ease-in-out" 
+                <button className="bg-green-600 text-white hover:text-green-200 px-2 rounded-bl-md hover:bg-green-800 transition duration-300 ease-in-out" 
                     onClick={() => {
                         if (offset > 0) {
                             setOffSet(offset - 20)}}
                         }
                 >Prev</button>
                 <span>{offset / 20 + 1}</span>
-                <button className="bg-green-600 px-2 rounded-tr-md hover:bg-green-800 transition duration-300 ease-in-out" 
+                <button className="bg-green-600 text-white hover:text-green-200 px-2 rounded-tr-md hover:bg-green-800 transition duration-300 ease-in-out" 
                     onClick={() => {
                         if (offset < 1340) {
                             setOffSet(offset + 20)}
