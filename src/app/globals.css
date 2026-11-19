@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes pokemon-appear {
+    0% {
+      opacity: 0%;
+      width: 0px;
+      filter: brightness(0) saturate(100%)
+              invert(95%) sepia(100%)
+              saturate(7000%) hue-rotate(350deg);
+    }
+    75% {
+      opacity: 25%;
+      width: 210px;
+    }
+    100% {
+      opacity: 100%;
+      width: 224px;
+      filter: none;
+    }
+}

@@ -1,4 +1,5 @@
 import { pokemonApi } from "@/api/api";
+import { PokeballAnimation } from "@/components/PokeballAnimation";
 import { PokemonType } from "@/types/pokemonType";
 import { BackgroundByTypes, BorderAndShadowTypes } from "@/utils/stylesByTypes";
 
@@ -15,9 +16,12 @@ const pokePage = async({ params }: Props) => {
         <main className="mt-20 mx-6">
             <section className={"md:flex shadow-md rounded-2xl overflow-hidden "+BorderAndShadowTypes[defaultTypes]}>
                 <div className="relative">
-                    <div className={BorderAndShadowTypes[defaultTypes] +" " + BackgroundByTypes[defaultTypes]+ " h-60 md:w-50 rounded-t-2xl rounded-b-full md:rounded-l-2xl md:rounded-r-full flex justify-center items-center "+ BorderAndShadowTypes}>
+                    <div className={BorderAndShadowTypes[defaultTypes] +" " + BackgroundByTypes[defaultTypes]+ " relative h-60 md:w-50 rounded-t-2xl rounded-b-full md:rounded-l-2xl md:rounded-r-full flex justify-center items-center "+ BorderAndShadowTypes}>
+                        <div className="absolute top-15 z-10 opacity-80">
+                            <PokeballAnimation />
+                        </div>
                         <img 
-                            className="w-56 max-h-56 -mb-12 md:mb-0 md:-mr-12"
+                            className="w-56 max-h-56 animate-[pokemon-appear_4.50s_ease-out_forwards]"
                             src={pokemon.sprites?.versions?.["generation-v"]["black-white"].animated.front_default || pokemon.sprites?.front_default || undefined} alt={pokemon.name} 
                         />
                     </div>

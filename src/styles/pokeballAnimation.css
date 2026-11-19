@@ -1,5 +1,74 @@
 
-/* Sequência da Pokébola */
+.foto-pokemon {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background: transparent;
+}
+
+.pokebola {
+    --tam: 96px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    width: var(--tam);
+    height: var(--tam);
+    margin-left: calc(var(--tam) / -2);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pokebola canvas {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.pokebola .topo {
+    top: 0;
+    height: 50%;
+    transform-origin: 0 100%;
+}
+
+.pokebola .base {
+    bottom: 0;
+    height: 50%;
+}
+
+.pokebola .botao {
+    top: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+.pokebola .luz {
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    margin: -7.5px 0 0 -7.5px;
+    filter: drop-shadow(0 0 6px #ff1a1a)
+            drop-shadow(0 0 10px #ff1a1a);
+    opacity: 0;
+    z-index: 3;
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    bottom: 168px;
+    width: 128px;
+    height: 128px;
+    margin: 0 0 -64px -64px;
+    filter: drop-shadow(0 0 12px rgba(255, 26, 26, .9));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
 
 .foto-pokemon.animando .pokebola {
     animation:
@@ -12,12 +81,11 @@
 }
 
 .foto-pokemon.animando .pokebola .topo {
-    transform-origin: 0 100%;
     animation: abrir 0.3s ease-out 2.1s forwards;
 }
 
-.foto-pokemon.animando .circulo {
-    animation: circulo 0.8s ease-out 2.2s forwards;
+.foto-pokemon.animando .circle {
+    animation: circle 0.8s ease-out 2.2s forwards;
 }
 
 @keyframes lancar {
@@ -25,10 +93,12 @@
         opacity: 1;
         transform: translate(-140px, 120px) rotate(0deg) scale(.6);
     }
+
     50% {
         opacity: 1;
         transform: translate(-40px, -110px) rotate(360deg) scale(1);
     }
+
     100% {
         opacity: 1;
         transform: translate(0, -80px) rotate(720deg) scale(1);
@@ -48,15 +118,17 @@
     }
 }
 
-@keyframes circulo {
+@keyframes circle {
     0% {
         opacity: 0;
         transform: scale(.2);
     }
+
     37% {
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         opacity: 0;
         transform: scale(1.3);
@@ -68,6 +140,7 @@
         opacity: 1;
         transform: translate(0, -80px) rotate(720deg) scale(1);
     }
+
     to {
         opacity: 0;
         transform: translate(0, -80px) rotate(720deg) scale(.5);
