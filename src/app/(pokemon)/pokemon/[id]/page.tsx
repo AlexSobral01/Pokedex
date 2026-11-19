@@ -17,8 +17,8 @@ const pokePage = async({ params }: Props) => {
                 <div className="relative">
                     <div className={BorderAndShadowTypes[defaultTypes] +" " + BackgroundByTypes[defaultTypes]+ " h-60 md:w-50 rounded-t-2xl rounded-b-full md:rounded-l-2xl md:rounded-r-full flex justify-center items-center "+ BorderAndShadowTypes}>
                         <img 
-                            className="w-56 -mb-12 md:mb-0 md:-mr-12"
-                            src={pokemon.sprites?.versions?.["generation-v"]["black-white"].animated.front_default || undefined} alt={pokemon.name} 
+                            className="w-56 max-h-56 -mb-12 md:mb-0 md:-mr-12"
+                            src={pokemon.sprites?.versions?.["generation-v"]["black-white"].animated.front_default || pokemon.sprites?.front_default || undefined} alt={pokemon.name} 
                         />
                     </div>
                     <div className="bg-gray-200 dark:bg-blue-950 absolute top-0 left-0 -z-10 h-full w-full"></div>

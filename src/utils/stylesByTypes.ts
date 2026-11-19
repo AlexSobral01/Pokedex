@@ -23,7 +23,7 @@ export const BorderAndShadowTypes: Record<string, string> = {
     normal: "border border-gray-500 shadow-gray-400",
     fire: "border border-red-500 shadow-red-400",
     water: "border border-blue-700 shadow-blue-500",
-    electric: "border border-yellow-500 shadow-blue-400",
+    electric: "border border-yellow-500 shadow-yellow-400",
     grass: "border border-green-700 shadow-green-800",
     ice: "border border-sky-200 shadow-sky-300",
     fighting: "border border-red-700 shadow-red-600",

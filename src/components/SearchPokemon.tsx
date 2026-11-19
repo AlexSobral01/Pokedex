@@ -37,15 +37,15 @@ const SearchPokemon = () => {
   }, [getPokemon, allPokemon]);
 
   return (
-    <div className="flex flex-col items-center p-6">
+    <div className="flex flex-col items-center p-6 relative">
       <input
-        className="my-4 p-2.5 outline-none border-none rounded-3xl bg-gray-300 dark:bg-white text-black min-w-[270px] px-4"
+        className=" p-2.5 outline-none border-none rounded-3xl bg-gray-300 dark:bg-white text-black min-w-[270px] px-4"
         type="text"
         placeholder="Pikachu"
         onChange={(e) => setGetPokemon(e.target.value)}
       />
       {pokemons.length > 0 && (
-        <ul className="bg-[#141f39] min-w-[270px] rounded-xl p-2">
+        <ul className="bg-gray-200 dark:bg-[#141f39] min-w-[270px] absolute top-19 rounded-xl p-2">
           {pokemons.map((pokemon: any) => (
             <Link key={pokemon.data.id} href={`/pokemon/${pokemon.data.id}`}>
               <li>
