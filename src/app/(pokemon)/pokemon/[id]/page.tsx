@@ -31,8 +31,6 @@ const pokePage = async({ params }: { params: Promise<{ id: string }> }) => {
 
     const evolutions:PokemonType[] = await getEvolution(pokemonEvolution.chain);
 
-    console.log(evolutions);
-
     return (
         <>
         <main className="mt-20 mx-6">
