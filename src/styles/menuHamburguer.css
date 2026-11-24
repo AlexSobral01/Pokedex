@@ -1,0 +1,34 @@
+#menu_hamburguer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu__hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu__hamburguer > span {
+        display: block;
+        height: 3px;
+        margin: 5px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+        transform-origin: center; 
+        transition: 0.2s;
+    }
+
+    #menu__hamburguer.active > span:nth-child(1) {
+        transform: translateY(12px) rotate(-45deg);
+    }
+
+    #menu__hamburguer.active > span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu__hamburguer.active > span:nth-child(3) {
+        transform: translateY(-4px) rotate(45deg);
+    }   
+}   
+    
